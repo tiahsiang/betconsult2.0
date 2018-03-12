@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=0">
+  <meta name="renderer" content="webkit">
+  <link type="favicon" rel="shortcut icon" href="./src/images/favicon.ico" mce_href="/favicon.ico" type="image/x-icon"/>
+  <link rel="shortcut icon" href="./src/images/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">
+  <title>博咨询_企业动态</title>
+  <!-- css by Tia -->
+  <link rel="stylesheet" href="./src/css/index.css"/>
+  <link rel="stylesheet" href="./src/css/pager.css"/>
+
+  <style>
+    body {
+      background: #f3f3f3;
+    }
+    #about-news {
+      position: relative;
+    }
+    #about-news .container {
+      height: auto;
+      padding: 40px 0 0 0;
+      position: relative;
+    }
+    #about-news .bg-left {
+      width: 100%;
+      height: 78px;
+      background: transparent;
+      position: absolute;
+      top: -39px;
+      left: 0;
+      z-index: 99;
+      overflow: hidden;
+    }
+    #about-news .bg-left .sqr {
+      width: 52.5%;
+      height: 100%;
+      float: left;
+      background: #87c228;
+      position: relative;
+    }
+    #about-news .bg-left .sqr p {
+      line-height: 40px;
+      position: absolute;
+      top: 50%;
+      right: 13%;
+      margin-top: -20px;
+    }
+    #about-news .bg-left .sqr p>a {
+      font-size: 18px;
+      color: #333;
+      font-weight: 400;
+    }
+    #about-news .bg-left .sqr p>a:last-child {
+      margin-left: 60px;
+    }
+    .icon-email, .icon-qq {
+      font-size: 19px;
+      margin-right: 10px;
+    }
+    .icon-email {
+      font-size: 22px;
+    }
+    #about-news .container .entps {
+      background: #fff;
+      margin-top: 30px;
+      padding: 78px 50px 30px 50px;
+      display: flex;
+      display: -webkit-flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    #about-news .sm-window {
+      width: 206px;
+      height: 210px;
+      position: relative;
+      z-index: 2;
+    }
+    #about-news .sm-window:after {
+      content: '';
+      display: inline-block;
+      width: 210px;
+      height: 280px;
+      border: 4px solid #87c228;
+      background: transparent;
+      position: absolute;
+      top: -34px;
+      right: -45px;
+      z-index: -1;
+    }
+    #about-news .sm-window .wrapper {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      text-align: left;
+    }
+    #about-news .sm-window .wrapper h1 {
+      font-size: 38px;
+      line-height: .88;
+      width: 200px;
+      margin-bottom: 10px;
+      color: #333;
+      font-weight: bold;
+      text-align: right;
+    }
+    .sm-window .wrapper img {
+      width: 206px;
+      height: 210px;
+      vertical-align: middle;
+      position: relative;
+    }
+    #about-news .sm-window .year {
+      font-size: 40px;
+      font-weight: bold;
+      font-family: 'FZMingSTJW  GB1 0';
+      color: #fff;
+    }
+    #about-news .b-year {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-top: 50px;
+      margin-left: 60px;
+    }
+    #about-news .e-year {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-top: 130px;
+      margin-left: 60px;
+    }
+    #about-news .big {
+      margin-top: 21px;
+    }
+    #about-news .news-aside {
+      width: 100%;
+    }
+    #about-news .news-list {
+      margin-top: -38px;
+      padding: 0 15px 20px 96px;
+    }
+    .news-list>li {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      text-align: left;
+      line-height: 1;
+      padding: 0 0 20px 0;
+      cursor: pointer;
+    }
+    .news-list>li label {
+      /*width: 10%;*/
+      text-align: center;
+      display: inline-block;
+      vertical-align: top;
+      padding-right: 5px;
+      border-right: 1px solid #bbbabb;
+      -webkit-box-shadow: 1px 0 0 0 #fff;
+    }
+    .news-list>li>label h2 {
+      width: 100%;
+      font-size: 32px;
+      color: #333;
+      font-weight: 200;
+    }
+    .news-list>li label p {
+      font-size: 12px;
+      color: #333;
+      font-weight: lighter;
+    }
+    .news-list>li .news-brief {
+      width: 100%;
+      display: inline-block;
+      vertical-align: top;
+      padding: 3px 0 0 10px;
+    }
+    .news-list>li .news-brief .news-title {
+      width: 100%;
+      height: 20px;
+      color: #333;
+      line-height: 20px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -o-text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+    .news-list>li .news-brief .news-title a {
+      display: block;
+      font-size: 18px;
+      font-weight: 400;
+    }
+    .news-title:hover {
+      color: #87c228;
+    }
+    .news-list>li .news-brief .news-info {
+      width: 100%;
+      font-size: 14px;
+      font-weight: 300;
+      color: #333;
+      height: 14px;
+      margin-top: 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -o-text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+    .news-pager {
+      text-align: right;
+      margin-right: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- 导航 -->
+<nav id="nav">
+  <div class="container">
+    <a class="logo" href="index.html"><img src="./src/images/logo-1.png" alt="lOGO"><b>博咨询</b></a>
+    <ul class="menu">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="index.html">旗下产品</a></li>
+      <li><a href="index.html">商务合作</a></li>
+      <li><a href="job.html">招贤纳士</a></li>
+      <li class="active"><a href="news.html">企业动态</a></li>
+      <li><a href="#">优伯国际</a></li>
+    </ul>
+    <div class="clearfix"></div>
+  </div>
+</nav>
+<!-- banner -->
+<section id="banner">
+  <div class="container">
+  </div>
+</section>
+<!-- 企业动态 -->
+<section id="about-news">
+  <div class="bg-left">
+    <div class="sqr">
+      <p>
+        <a href="#"><i class="icon icon-qq">&#xe612;</i>1927887072</a>
+        <a href="#"><i class="icon icon-email">&#xe648;</i>HR@betconsult.me</a>
+      </p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="entps">
+      <div class="sm-window">
+        <div class="wrapper">
+          <img src="./src/images/11-1.jpg" alt="1">
+          <b class="year b-year">2016</b>
+          <b class="year e-year">2018</b>
+        </div>
+        <h2 class="big">NEWS LIST</h2>
+        <h4 class="h4">动态列表</h4>
+      </div>
+      <div class="news-aside">
+        <!-- 新闻列表 s -->
+        <ul class="news-list">
+          <li>
+            <label>
+              <h2>01</h2>
+              <p>2018.01</p>
+            </label>
+            <div class="news-brief">
+              <h2 class="news-title"><a  href="./news-detail.html">博牛解密：菲律宾HR国内招人全套路</a></h2>
+              <p class="news-info">博牛社区本篇文章，来源于博牛用户供稿，作为前被骗过来的行业出身的博友，离开这个行业之后，实在忍不住对于HR行业的吐槽怨念，写下了如此文字，去除偏颇处，对于了解这个行业，有一定可取之处。有一种精神叫做亮剑精神，有一种主义叫完美主义，有一种人就是喜欢死磕到底。对，没错，我就是那种人。马洛伊·山多尔说过:&nbsp;话多之人，总是试图隐瞒什么；沉默之人，心里肯定坚信着什么。在你看来就是普普通通一<a href="#">[详情]</a></p>
+            </div>
+          </li>
+          <li>
+            <label>
+              <h2>01</h2>
+              <p>2018.01</p>
+            </label>
+            <div class="news-brief">
+              <h2 class="news-title"><a href="./news-detail.html">「教学」如何在国内也能正常使用telegram</a></h2>
+              <p class="news-info">从事菠菜行业的同学，对于通讯工具的选择需要非常谨慎，信息安全最重要，正常个人号越来越多人抛弃了在国内使用习惯的微信，选择更加信息安全的telegram（纸飞机），telegram主打安全，强调通信的保密性，在沟通的时候更加放心舒服。官方曾发起一个竞赛，悬赏20万比特比奖励有能力破解已拦截的通话消息，一位信息技术社区的用户发现了安全问题，修正过后，他获得了10万美金的奖励。在我们隐私被暴露 在互联网<a href="#">[详情]</a></p>
+            </div>
+          </li>
+          <li>
+            <label>
+              <h2>01</h2>
+              <p>2018.01</p>
+            </label>
+            <div class="news-brief">
+              <h2 class="news-title"><a href="./news-detail.html">芝麻信用：金融行业与庞大黑产的无声战场</a></h2>
+              <p class="news-info">时常从各个群组看到花呗，芝麻等信用开口子，上涨额度只需要多少钱等等，随着芝麻信用分可以在签证办理、酒店住宿、租车等多个领域发挥作用，使得很多人希望能够尽快涨分。于是专门的“刷分”机构应运而生，在一些社交平台上，时不时地有人会打出帮助提高芝麻信用评分的广告，铺天盖地广告的背后，隐藏着怎样不为人知的秘密，今天借助一篇芝麻信用的深入调查贴，让我们走进神秘的信用及涨额度背后的黑色产业链条。<a href="#">[详情]</a></p>
+            </div>
+          </li>
+          <li>
+            <label>
+              <h2>01</h2>
+              <p>2018.01</p>
+            </label>
+            <div class="news-brief">
+              <h2 class="news-title"><a href="./news-detail.html">新版菠菜圈火热上线！新版菠菜圈火热上线！新版菠菜圈火热上线！新版菠菜圈火热上线！新版菠菜圈火热上线！新版菠菜圈火热上线！</a></h2>
+              <p class="news-info">2018年1月1日新版菠菜圈火热上线，新版菠菜圈火热上线新版…2018年1月1日新版菠菜圈火热上线，新版菠菜圈火热上线新版…2018年1月1日新版菠菜圈火热上线，新版菠菜圈火热上线新版…2018年1月1日新版菠菜圈火热上线，新版菠菜圈火热上线新版…2018年1月1日新版菠菜圈火热上线，新版菠菜圈火热上线新版…2018年1月1日新版菠菜圈火热上线，新版菠菜圈火热上线新版…2018年1月1日新版菠菜圈火热上线，新版菠菜圈火热上线新版…2018年1月1日新版菠菜圈火热上线，新版菠菜圈火热上线新版…2018年1月1日新版菠菜圈火热上线，新版菠菜圈火热上线新版…<a href="#">[详情]</a></p>
+            </div>
+          </li>
+          <li>
+            <label>
+              <h2>01</h2>
+              <p>2018.01</p>
+            </label>
+            <div class="news-brief">
+              <h2 class="news-title"><a href="./news-detail.html">菠菜新手刚来菲律宾？年后想换菠菜公司？ 你要注意这些！</a></h2>
+              <p class="news-info">菠菜新手刚来菲律宾？年后想换菠菜公司？ 你要注意这些！菠菜新手刚来菲律宾？年后想换菠菜公司？ 你要注意这些！菠菜新手刚来菲律宾？年后想换菠菜公司？ 你要注意这些！菠菜新手刚来菲律宾？年后想换菠菜公司？ 你要注意这些！菠菜新手刚来菲律宾？年后想换菠菜公司？ 你要注意这些！<a href="#">[详情]</a></p>
+            </div>
+          </li>
+          <li>
+            <label>
+              <h2>01</h2>
+              <p>2018.01</p>
+            </label>
+            <div class="news-brief">
+              <h2 class="news-title"><a href="./news-detail.html">博牛解密：菲律宾HR国内招人全套路</a></h2>
+              <p class="news-info">博牛社区本篇文章，来源于博牛用户供稿，作为前被骗过来的行业出身的博友，离开这个行业之后，实在忍不住对于HR行业的吐槽怨念，写下了如此文字，去除偏颇处，对于了解这个行业，有一定可取之处。有一种精神叫做亮剑精神，有一种主义叫完美主义，有一种人就是喜欢死磕到底。对，没错，我就是那种人。马洛伊·山多尔说过:&nbsp;话多之人，总是试图隐瞒什么；沉默之人，心里肯定坚信着什么。在你看来就是普普通通一<a href="#">[详情]</a></p>
+            </div>
+          </li>
+          <li>
+            <label>
+              <h2>01</h2>
+              <p>2018.01</p>
+            </label>
+            <div class="news-brief">
+              <h2 class="news-title"><a href="./news-detail.html">「教学」如何在国内也能正常使用telegram</a></h2>
+              <p class="news-info">从事菠菜行业的同学，对于通讯工具的选择需要非常谨慎，信息安全最重要，正常个人号越来越多人抛弃了在国内使用习惯的微信，选择更加信息安全的telegram（纸飞机），telegram主打安全，强调通信的保密性，在沟通的时候更加放心舒服。官方曾发起一个竞赛，悬赏20万比特比奖励有能力破解已拦截的通话消息，一位信息技术社区的用户发现了安全问题，修正过后，他获得了10万美金的奖励。在我们隐私被暴露 在互联网<a href="#">[详情]</a></p>
+            </div>
+          </li>
+          <li>
+            <label>
+              <h2>01</h2>
+              <p>2018.01</p>
+            </label>
+            <div class="news-brief">
+              <h2 class="news-title"><a href="./news-detail.html">芝麻信用：金融行业与庞大黑产的无声战场</a></h2>
+              <p class="news-info">时常从各个群组看到花呗，芝麻等信用开口子，上涨额度只需要多少钱等等，随着芝麻信用分可以在签证办理、酒店住宿、租车等多个领域发挥作用，使得很多人希望能够尽快涨分。于是专门的“刷分”机构应运而生，在一些社交平台上，时不时地有人会打出帮助提高芝麻信用评分的广告，铺天盖地广告的背后，隐藏着怎样不为人知的秘密，今天借助一篇芝麻信用的深入调查贴，让我们走进神秘的信用及涨额度背后的黑色产业链条。<a href="#">[详情]</a></p>
+            </div>
+          </li>
+          <li>
+            <label>
+              <h2>01</h2>
+              <p>2018.01</p>
+            </label>
+            <div class="news-brief">
+              <h2 class="news-title"><a href="./news-detail.html">新版菠菜圈火热上线！新版菠菜圈火热上线！新版菠菜圈火热上线！新版菠菜圈火热上线！新版菠菜圈火热上线！新版菠菜圈火热上线！</a></h2>
+              <p class="news-info">2018年1月1日新版菠菜圈火热上线，新版菠菜圈火热上线新版…2018年1月1日新版菠菜圈火热上线，新版菠菜圈火热上线新版…2018年1月1日新版菠菜圈火热上线，新版菠菜圈火热上线新版…2018年1月1日新版菠菜圈火热上线，新版菠菜圈火热上线新版…2018年1月1日新版菠菜圈火热上线，新版菠菜圈火热上线新版…2018年1月1日新版菠菜圈火热上线，新版菠菜圈火热上线新版…2018年1月1日新版菠菜圈火热上线，新版菠菜圈火热上线新版…2018年1月1日新版菠菜圈火热上线，新版菠菜圈火热上线新版…2018年1月1日新版菠菜圈火热上线，新版菠菜圈火热上线新版…<a href="#">[详情]</a></p>
+            </div>
+          </li>
+          <li>
+            <label>
+              <h2>01</h2>
+              <p>2018.01</p>
+            </label>
+            <div class="news-brief">
+              <h2 class="news-title"><a href="./news-detail.html">菠菜新手刚来菲律宾？年后想换菠菜公司？ 你要注意这些！</a></h2>
+              <p class="news-info">菠菜新手刚来菲律宾？年后想换菠菜公司？ 你要注意这些！菠菜新手刚来菲律宾？年后想换菠菜公司？ 你要注意这些！菠菜新手刚来菲律宾？年后想换菠菜公司？ 你要注意这些！菠菜新手刚来菲律宾？年后想换菠菜公司？ 你要注意这些！菠菜新手刚来菲律宾？年后想换菠菜公司？ 你要注意这些！<a href="#">[详情]</a></p>
+            </div>
+          </li>
+        </ul>
+        <!-- 新闻列表 e -->
+        <!-- 分页 s -->
+        <div class="news-pager">
+          <ul class="pagination" id="page2">
+          </ul>
+          <div class="pageJump">
+            <span>跳转到</span>
+            <input type="text"/>
+            <span>页</span>
+            <button type="button" class="button">确定</button>
+          </div>
+        </div>
+        <!-- 分页 e -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- footer -->
+<footer id="Footer">
+  <div class="foot-box2">
+    <div class="container">
+      <div class="friend-title">
+        <h2 class="rt-title">战略合作伙伴</h2>
+      </div>
+      <ul class="friend-links">
+        <li class="friend-li">
+          <a target="_blank" href=" http://www.maya-gaming.com"><i class="partners ptn1"></i></a>
+        </li>
+        <li class="friend-li">
+          <a target="_blank" href="http://www.boniu365.com"><i class="partners ptn2"></i></a>
+        </li>
+        <li class="friend-li">
+          <a target="_blank" href="#"><i class="partners ptn3"></i></a>
+        </li>
+        <li class="friend-li">
+          <a target="_blank" href="https://www.bomao88.com/auth/signin"><i class="partners ptn4"></i></a>
+        </li>
+        <li class="friend-li">
+          <a target="_blank" href="https://www.1396bo.com/app"><i class="partners ptn5"></i></a>
+        </li>
+        <li class="friend-li">
+          <a target="_blank" href="https://www.g2easia.com/"><i class="partners ptn6"></i></a>
+        </li>
+        <li class="friend-li">
+          <a target="_blank" href="http://www.haoyunlai.ph/"><i class="partners ptn7"></i></a>
+        </li>
+        <li class="friend-li">
+          <a target="_blank" href="https://bbs.boniu3658.com/thread-179439-1-1.html"><i class="partners ptn8"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-box">
+    <div class="container">
+      <ul class="foot-list">
+        <li class="icon-cnt">
+          <a class="online" href="#">
+            <i class="icon icon-msg">&#xe700;</i><b>在线咨询</b>
+          </a>
+          <p>QQ：1927887072</p>
+          <p>Email：HR@betconsult.me</p>
+          <p class="icons">
+            <a href="#"><i class="icon icon-wechat">&#xe62f;</i></a>
+            <a href="#"><i class="icon icon-qq2">&#xe612;</i></a>
+            <a href="#"><i class="icon icon-skype">&#xe697;</i></a>
+          </p>
+        </li>
+        <li class="wx-img">
+          <img src="./src/images/wx-img.png" alt="博咨询微信">
+          <p class="wx-txt">微信扫一扫关注博咨询</p>
+        </li>
+        <li>
+          <h2>关于我们</h2>
+          <a href="#">关于我们</a>
+          <a href="#">最新消息</a>
+        </li>
+        <li>
+          <h2>旗下产品</h2>
+          <a href="#">博牛社区</a>
+          <a href="#">菠菜圈</a>
+          <a href="#">伯招聘</a>
+          <a href="#">博咨询月刊</a>
+        </li>
+        <li>
+          <h2>商务合作</h2>
+          <a href="#">战略合作</a>
+          <a href="#">网站合作</a>
+          <a href="#">博咨询月刊合作</a>
+          <a href="#">伯招聘海外人才网</a>
+        </li>
+        <li>
+          <h2>招贤纳士</h2>
+          <a href="#">高薪职位</a>
+        </li>
+        <li>
+          <h2>优伯国际</h2>
+          <a href="#">了解更多</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="copy-rt">
+    <div class="container">Power By Betconsult &copy;2016-2020 Betconsut Consulting Inc</div>
+  </div>
+</footer>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="./src/bootstrap/js/bootstrap.min.js"></script>
+<script src="./src/js/pager.js"></script>
+<script>
+  $(".tabs").on("click","li", function (e) {
+    e.preventDefault();
+    let idx = $(this).index();
+    $(this).siblings().removeClass("active");
+    $(this).addClass("active");
+    $(this).parents(".tab-wrap").find(".tab-content>li").eq(idx).siblings().removeClass("active");
+    $(this).parents(".tab-wrap").find(".tab-content>li").eq(idx).addClass("active");
+  })
+</script>
+<script>
+  Page({
+    num:7,					//页码数
+    startnum:1,				//指定页码
+    elem:$('#page2'),		//指定的元素
+    callback:function(n){	//回调函数
+      console.log(n);
+    }
+  });
+</script>
+
+
+</body>
+</html>

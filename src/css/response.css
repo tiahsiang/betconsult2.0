@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/**** 响应式 *****/
+@media screen and (max-width: 600px) {
+  .bg-left .sqr {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 854px) {
+  .bg-left .sqr {
+    width: 54%;
+  }
+  .bg-left .sqr p {
+    right: 9%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .bg-left .sqr {
+    width: 53%;
+  }
+}

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=0">
+  <meta name="renderer" content="webkit">
+  <link type="favicon" rel="shortcut icon" href="./src/images/favicon.ico" mce_href="/favicon.ico" type="image/x-icon"/>
+  <link rel="shortcut icon" href="./src/images/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">
+  <title>博咨询_企业动态详情</title>
+  <!-- Bootstrap -->
+  <!--<link rel="stylesheet" href="./src/bootstrap/css/bootstrap.min.css">-->
+  <!-- css by Tia -->
+  <link rel="stylesheet" href="./src/css/index.css"/>
+  <link rel="stylesheet" href="./src/css/pager.css"/>
+  <!--&lt;!&ndash;[if lt IE 9]>-->
+  <!--<script src="./src/js/html5shiv.min.js"></script>-->
+  <!--<script src="./src/js/respond.min.js"></script>-->
+  <!--<![endif]&ndash;&gt;-->
+  <style>
+    body {
+      background: #f3f3f3;
+    }
+    #news-detail {
+      position: relative;
+    }
+    #news-detail .container {
+      height: auto;
+      padding: 40px 0 0 0;
+      position: relative;
+    }
+    #news-detail .bg-left {
+      width: 100%;
+      height: 78px;
+      background: transparent;
+      position: absolute;
+      top: -39px;
+      left: 0;
+      z-index: 99;
+      overflow: hidden;
+    }
+    #news-detail .bg-left .sqr {
+      width: 52.5%;
+      height: 100%;
+      float: left;
+      background: #87c228;
+      position: relative;
+    }
+    #news-detail .bg-left .sqr p {
+      line-height: 40px;
+      position: absolute;
+      top: 50%;
+      right: 13%;
+      margin-top: -20px;
+    }
+    #news-detail .bg-left .sqr p>a {
+      font-size: 18px;
+      color: #333;
+      font-weight: 400;
+    }
+    #news-detail .bg-left .sqr p>a:last-child {
+      margin-left: 60px;
+    }
+    .icon-email, .icon-qq {
+      font-size: 19px;
+      margin-right: 10px;
+    }
+    .icon-email {
+      font-size: 22px;
+    }
+    #news-detail .container .entps {
+      background: #fff;
+      margin-top: 30px;
+      padding: 78px 50px 30px 50px;
+      display: flex;
+      display: -webkit-flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    #news-detail .sm-window {
+      width: 206px;
+      height: 210px;
+      position: relative;
+      z-index: 2;
+    }
+    #news-detail .sm-window:after {
+      content: '';
+      display: inline-block;
+      width: 210px;
+      height: 280px;
+      border: 4px solid #87c228;
+      background: transparent;
+      position: absolute;
+      top: -34px;
+      right: -45px;
+      z-index: -1;
+    }
+    #news-detail .sm-window .wrapper {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      text-align: left;
+    }
+    #news-detail .sm-window .wrapper h1 {
+      font-size: 38px;
+      line-height: .88;
+      width: 200px;
+      margin-bottom: 10px;
+      color: #333;
+      font-weight: bold;
+      text-align: right;
+    }
+    .sm-window .wrapper img {
+      width: 206px;
+      height: 210px;
+      vertical-align: middle;
+      position: relative;
+    }
+    #news-detail .sm-window .year {
+      font-size: 40px;
+      font-weight: bold;
+      font-family: 'FZMingSTJW  GB1 0';
+      color: #fff;
+    }
+    #news-detail .b-year {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-top: 50px;
+      margin-left: 60px;
+    }
+    #news-detail .e-year {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-top: 130px;
+      margin-left: 60px;
+    }
+    #news-detail .big {
+      margin-top: 21px;
+      font-size: 28px;
+    }
+    #news-detail .news-aside {
+      width: 100%;
+    }
+    #news-detail .news-list {
+      margin-top: -30px;
+      padding: 0 15px 20px 96px;
+    }
+    .news-list>li.backto {
+      text-align: right;
+    }
+    .news-list>li.backto a {
+      text-align: center;
+      padding: 10px 30px;
+      background: #fff;
+      border: 1px solid #999;
+      border-radius: 3px;
+      font-size: 14px;
+      color: #333;
+    }
+    .news-list>li.backto a:hover, .news-list>li.backto a:active {
+      border: 1px solid #87c228;
+      color: #87c228;
+    }
+    .news-list>li.news-content {
+      width: 100%;
+      margin-top: 10px;
+      padding: 30px 0;
+    }
+    .news-list>li.news-content .news-title {
+      width: 100%;
+      font-size: 32px;
+      font-weight: 400;
+      color: #333;
+      padding-bottom: 15px;
+      border-bottom: 2px solid #f2f2f2;
+    }
+    .news-title:hover {
+      color: #87c228;
+    }
+    .news-list>li.news-content .pub-time {
+      font-size: 14px;
+      color: #666;
+      font-weight: lighter;
+      padding: 10px 0;
+    }
+    .news-list>li.news-content .pub-content {
+      font-size: 16px;
+      color: #333;
+      font-weight: lighter;
+      padding: 10px 0;
+      white-space: pre-line;
+      text-align: justify;
+    }
+  </style>
+</head>
+
+<body>
+<!-- 导航 -->
+<nav id="nav">
+  <div class="container">
+    <a class="logo" href="index.html"><img src="./src/images/logo-1.png" alt="lOGO"><b>博咨询</b></a>
+    <ul class="menu">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="index.html">旗下产品</a></li>
+      <li><a href="index.html">商务合作</a></li>
+      <li><a href="job.html">招贤纳士</a></li>
+      <li class="active"><a href="news.html">企业动态</a></li>
+      <li><a href="#">优伯国际</a></li>
+    </ul>
+    <div class="clearfix"></div>
+  </div>
+</nav>
+<!-- banner -->
+<section id="banner">
+  <div class="container">
+  </div>
+</section>
+<!-- 企业动态 -->
+<section id="news-detail">
+  <div class="bg-left">
+    <div class="sqr">
+      <p>
+        <a href="#"><i class="icon icon-qq">&#xe612;</i>1927887072</a>
+        <a href="#"><i class="icon icon-email">&#xe648;</i>HR@betconsult.me</a>
+      </p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="entps">
+      <div class="sm-window">
+        <div class="wrapper">
+          <img src="./src/images/11-1.jpg" alt="1">
+          <b class="year b-year">2016</b>
+          <b class="year e-year">2018</b>
+        </div>
+        <h2 class="big">NEWS DETAILS</h2>
+        <h4 class="h4">动态详情</h4>
+      </div>
+      <div class="news-aside">
+        <!-- 新闻详情 s -->
+        <ul class="news-list">
+          <li class="backto">
+            <a href="./news.html">返回列表</a>
+          </li>
+          <li class="news-content">
+            <h2 class="news-title">蚂蚁金服将获阿里巴巴入股，上市或已进入倒计时</h2>
+            <p class="pub-time">2017.02.03  15:54</p>
+            <p class="pub-content">
+              作为超级独角兽，蚂蚁金服的上市传闻一直是行业关注的焦点。继2016年4月B轮融资45亿美元后，蚂蚁金服又传来重磅消息：2月1日，阿里巴巴发布公告，将根据2014年双方签订的协议入股蚂蚁金服并获得33%股权。
+
+              阿里巴巴入股后，蚂蚁金服有了更为确定的股权结构；且无需继续每年分享37.5%税前利润，拥有了更多现金流；同时还背靠阿里巴巴，向上市迈出重要一步。
+
+              <h4 style="font-size: 18px;font-weight: bold;">入股：2014年的协议</h4><br>
+
+              2014年8月，阿里巴巴在准备IPO时，在招股书中披露了与蚂蚁金服的协议。协议规定，蚂蚁金服每年需向阿里
+            巴巴支付知识产权及技术服务费，金额相当于其税前利润的37.5%。<br><br>
+
+              协议还规定，在条件允许的情况下，阿里巴巴有权入股并持有蚂蚁金服33%的股权，并将相应的知识产权转让给蚂蚁金服，上述分润安排同步终止。<br><br>
+
+              此前几年，蚂蚁金服是每年交给阿里税前利润的37.5%，现在阿里巴巴选择了入股蚂蚁金服获得33%的股权。<br><br><br>
+
+              <h4 style="font-size: 18px;font-weight: bold;">上市：实质障碍已扫清</h4><br>
+
+              双方的协议签订于2014年，但协议中并未规定入股时间。为什么会在现在这个时间点？联想到此前的一些迹象, 有理由相信，这意味着蚂蚁金服的上市计划或已进入倒计时阶段。<br><br>
+
+              蚂蚁金服极可能在A股上市的，马云曾在2014时表示“希望蚂蚁金服在A股上市”。而根据证监会的要求，拟上市公司应股权清晰，在A股上市过程中不允许存在类似于可能改变公司股权结构的安排。<br><br>
+
+              阿里巴巴有权入股蚂蚁金服33%，但如果迟迟不入股，这意味着蚂蚁金服的股权结构随时可能有较大变动，存在不确定性。尤其在A股，这对准备上市的企业是非常大的挑战。<br><br>
+
+
+              即便上市成功，如果入股之事悬而未决，这也会抬高后续投资者跟进的门槛。此外，如果蚂蚁金服继续缴纳每
+              年37.5%的税前利润分成。就算上市了，每年都有一笔如此巨额的支出，这对其业务发展、股价都可能产生较
+              大影响。<br><br>
+
+
+              结合这些点来看，阿里巴巴的入股，一方面让蚂蚁金服有了更为确定的股权结构；同时，蚂蚁金服无需继续每年
+              分享37.5%税前利润，拥有了更多现金流；同时还多了一个大的战略投资者，可谓扫清了蚂蚁金服在A股上市的
+              实质障碍。
+            </p>
+          </li>
+        </ul>
+        <!-- 新闻详情 e -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- footer -->
+<footer id="Footer">
+  <div class="foot-box2">
+    <div class="container">
+      <div class="friend-title">
+        <h2 class="rt-title">战略合作伙伴</h2>
+      </div>
+      <ul class="friend-links">
+        <li class="friend-li">
+          <a target="_blank" href=" http://www.maya-gaming.com"><i class="partners ptn1"></i></a>
+        </li>
+        <li class="friend-li">
+          <a target="_blank" href="http://www.boniu365.com"><i class="partners ptn2"></i></a>
+        </li>
+        <li class="friend-li">
+          <a target="_blank" href="#"><i class="partners ptn3"></i></a>
+        </li>
+        <li class="friend-li">
+          <a target="_blank" href="https://www.bomao88.com/auth/signin"><i class="partners ptn4"></i></a>
+        </li>
+        <li class="friend-li">
+          <a target="_blank" href="https://www.1396bo.com/app"><i class="partners ptn5"></i></a>
+        </li>
+        <li class="friend-li">
+          <a target="_blank" href="https://www.g2easia.com/"><i class="partners ptn6"></i></a>
+        </li>
+        <li class="friend-li">
+          <a target="_blank" href="http://www.haoyunlai.ph/"><i class="partners ptn7"></i></a>
+        </li>
+        <li class="friend-li">
+          <a target="_blank" href="https://bbs.boniu3658.com/thread-179439-1-1.html"><i class="partners ptn8"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-box">
+    <div class="container">
+      <ul class="foot-list">
+        <li class="icon-cnt">
+          <a class="online" href="#">
+            <i class="icon icon-msg">&#xe700;</i><b>在线咨询</b>
+          </a>
+          <p>QQ：1927887072</p>
+          <p>Email：HR@betconsult.me</p>
+          <p class="icons">
+            <a href="#"><i class="icon icon-wechat">&#xe62f;</i></a>
+            <a href="#"><i class="icon icon-qq2">&#xe612;</i></a>
+            <a href="#"><i class="icon icon-skype">&#xe697;</i></a>
+          </p>
+        </li>
+        <li class="wx-img">
+          <img src="./src/images/wx-img.png" alt="博咨询微信">
+          <p class="wx-txt">微信扫一扫关注博咨询</p>
+        </li>
+        <li>
+          <h2>关于我们</h2>
+          <a href="#">关于我们</a>
+          <a href="#">最新消息</a>
+        </li>
+        <li>
+          <h2>旗下产品</h2>
+          <a href="#">博牛社区</a>
+          <a href="#">菠菜圈</a>
+          <a href="#">伯招聘</a>
+          <a href="#">博咨询月刊</a>
+        </li>
+        <li>
+          <h2>商务合作</h2>
+          <a href="#">战略合作</a>
+          <a href="#">网站合作</a>
+          <a href="#">博咨询月刊合作</a>
+          <a href="#">伯招聘海外人才网</a>
+        </li>
+        <li>
+          <h2>招贤纳士</h2>
+          <a href="#">高薪职位</a>
+        </li>
+        <li>
+          <h2>优伯国际</h2>
+          <a href="#">了解更多</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="copy-rt">
+    <div class="container">Power By Betconsult &copy;2016-2020 Betconsut Consulting Inc</div>
+  </div>
+</footer>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="./src/bootstrap/js/bootstrap.min.js"></script>
+<script>
+  $(".tabs").on("click","li", function (e) {
+    e.preventDefault();
+    let idx = $(this).index();
+    $(this).siblings().removeClass("active");
+    $(this).addClass("active");
+    $(this).parents(".tab-wrap").find(".tab-content>li").eq(idx).siblings().removeClass("active");
+    $(this).parents(".tab-wrap").find(".tab-content>li").eq(idx).addClass("active");
+  })
+</script>
+
+</body>
+</html>

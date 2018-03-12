@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=0">
+  <meta name="renderer" content="webkit">
+  <link type="favicon" rel="shortcut icon" href="./src/images/favicon.ico" mce_href="/favicon.ico" type="image/x-icon"/>
+  <link rel="shortcut icon" href="./src/images/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">
+  <title>博咨询_月刊杂志</title>
+  <!-- css by Tia -->
+  <link rel="stylesheet" type="text/css" href="src/css/index.css"/>
+  <link rel="stylesheet" type="text/css" href="src/css/magazine-carousel.css">
+
+  <style>
+    #magazine {
+      position: relative;
+    }
+    #magazine .container {
+      height: 690px;
+      padding: 40px 60px 20px 60px;
+      position: relative;
+    }
+    #magazine .bg-left {
+      width: 100%;
+      height: 78px;
+      background: transparent;
+      position: absolute;
+      top: -39px;
+      left: 0;
+      z-index: 99;
+      overflow: hidden;
+    }
+    #magazine .bg-left .sqr {
+      width: 49%;
+      height: 100%;
+      float: left;
+      background: #87c228;
+      position: relative;
+    }
+    #magazine .bg-left .sqr p {
+      line-height: 40px;
+      position: absolute;
+      top: 50%;
+      right: 13%;
+      margin-top: -20px;
+    }
+    #magazine .bg-left .sqr p>a {
+      font-size: 18px;
+      color: #333;
+      font-weight: 400;
+    }
+    #magazine .bg-left .sqr p>a:last-child {
+      margin-left: 60px;
+    }
+    /*#magazine .bg-left .sqr p>a:hover {*/
+    /*color: #fff;*/
+    /*}*/
+    .icon-email, .icon-qq {
+      font-size: 19px;
+      margin-right: 10px;
+    }
+    .icon-email {
+      font-size: 22px;
+    }
+    #magazine .prd-title {
+      width: 306px;
+      height: 78px;
+      text-align: right;
+      position: absolute;
+      top: 22%;
+      right: 60px;
+      z-index: 99;
+      -webkit-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+    }
+    .prd-title b {
+      display: inline-block;
+      width: 234px;
+      height: 2px;
+      background: #87c228;
+    }
+    #magazine .small {
+      color: #333;
+    }
+    #magazine .big {
+      margin-top: 60px;
+      color: #333;
+    }
+    #magazine .h4 {
+      font-size: 18px;
+      color: #333;
+      font-weight: 400;
+    }
+    .mgz {
+      display: flex;
+      display: -webkit-flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-top: 60px;
+    }
+    .pub-intro {
+      width: 520px;
+      height: 220px;
+      white-space: pre-line;
+      text-align: justify;
+      font-size: 14px;
+      color: #333;
+    }
+    ul, li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .pub-count {
+      width: 520px;
+      display: flex;
+      display: -webkit-flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    .pub-count>li h2 {
+      font-size: 44px;
+      font-weight: 400;
+      color: #333;
+    }
+    .pub-count>li p {
+      font-size: 14px;
+      font-weight: normal;
+      color: #333;
+    }
+    .mgz-img {
+      max-width: 455px;
+      height: 308px;
+      text-align: center;
+    }
+    .mgz-img>img {
+      width: 100%;
+      height: 100%;
+      vertical-align: middle;
+    }
+    /* 杂志轮播 */
+    #magazine-carousel {
+      width: 100%;
+      height: 625px;
+      background: url(./src/images/55.jpg) 0 0 no-repeat;
+      background-size: cover;
+      color: #fff;
+      position: relative;
+      background-color: #c4e9fc;
+    }
+    #magazine-carousel .container {
+      padding: 40px 60px 20px 60px;
+      position: relative;
+    }
+    #magazine-carousel .bg-right {
+      width: 100%;
+      height: 78px;
+      background: transparent;
+      position: absolute;
+      top: -39px;
+      left: 0;
+      z-index: 99;
+    }
+    #magazine-carousel .bg-right .sqr {
+      width: 44.4%;
+      height: 100%;
+      float: right;
+      background: #87c228;
+    }
+    #magazine-carousel .prd-title {
+      width: 306px;
+      height: 100px;
+      text-align: right;
+      position: absolute;
+      top: 28%;
+      right: 60px;
+      z-index: 99;
+      -webkit-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+    }
+    #magazine-carousel .prd-title .btn-contact {
+      display: inline-block;
+      width: 160px;
+      height: 38px;
+      text-align: center;
+      line-height: 38px;
+      margin-top: 48px;
+      font-size: 14px;
+      color: #fff;
+      border-radius: 27px;
+      background: transparent;
+      border: 1px solid #fff;
+    }
+    .btn-contact:hover {
+      border-color: #87c228;
+      color: #87c228;
+      text-decoration: none;
+    }
+    #magazine-carousel .prd-title b {
+      display: inline-block;
+      width: 234px;
+      height: 2px;
+      background: #fff;
+    }
+    #magazine-carousel .small {
+      color: #fff;
+    }
+    #magazine-carousel .big {
+      margin-top: 26px;
+      color: #fff;
+    }
+    #magazine-carousel .h4 {
+      font-size: 18px;
+      color: #fff;
+      font-weight: 400;
+    }
+    /**** 方块装饰条 ***/
+    .square {
+      position: relative;
+    }
+    .square .container {
+      height: 320px;
+      position: relative;
+    }
+    .square .bg-left {
+      width: 100%;
+      height: 179px;
+      background: transparent;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 99;
+      overflow: hidden;
+    }
+    .square .bg-left .sqr {
+      width: 13%;
+      height: 100%;
+      float: left;
+      z-index: 100;
+      background: #87c228;
+      position: relative;
+    }
+    .square .bg-left .sqr .white {
+      width: 53px;
+      height: 46px;
+      background: #fff;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 101;
+    }
+    .square .bg-left .sqr .green {
+      width: 46px;
+      height: 46px;
+      background: #87c228;
+      position: absolute;
+      right: -46px;
+      bottom: 0;
+      z-index: 101;
+    }
+    .square .bg-right {
+      width: 100%;
+      height: auto;
+      background: transparent;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 99;
+    }
+    .square .bg-right .sqr {
+      width: 13%;
+      height: 78px;
+      float: right;
+      background: #87c228;
+      position: relative;
+    }
+    .square .bg-right .sqr .green {
+      width: 46px;
+      height: 46px;
+      background: #87c228;
+      position: absolute;
+      left: -46px;
+      top: -46px;
+      z-index: 101;
+    }
+
+  </style>
+</head>
+<body>
+<!-- 导航 -->
+<nav id="nav">
+  <div class="container">
+    <a class="logo" href="index.html"><img src="./src/images/logo-1.png" alt="lOGO"><b>博咨询</b></a>
+    <ul class="menu">
+      <li><a href="index.html">首页</a></li>
+      <li class="active"><a href="magazine.html">旗下产品</a></li>
+      <li><a href="index.html">商务合作</a></li>
+      <li><a href="job.html">招贤纳士</a></li>
+      <li><a href="news.html">企业动态</a></li>
+      <li><a href="#">优伯国际</a></li>
+    </ul>
+    <div class="clearfix"></div>
+  </div>
+</nav>
+<!-- banner -->
+<section id="banner">
+  <div class="container">
+  </div>
+</section>
+<!-- 博咨询月刊 -->
+<section id="magazine">
+  <div class="bg-left">
+    <div class="sqr">
+      <p>
+        <a href="#"><i class="icon icon-qq">&#xe612;</i>1927887072</a>
+        <a href="#"><i class="icon icon-email">&#xe648;</i>HR@betconsult.me</a>
+      </p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="prd-title">
+      <h6 class="small">Monthly Magazine</h6>
+      <b class="line-green"></b>
+    </div>
+    <h2 class="big">MONTHLY MAGAZINE</h2>
+    <h4 class="h4">博咨询·月刊</h4>
+    <div class="mgz">
+      <div>
+        <div class="pub-intro">
+          咨询博月刊发行纸质刊物，同时提供在线电子版阅读。读者覆盖菲律宾，马来西亚，
+          泰国，台湾，马耳他等国家和地区，是目前唯一取得菲律宾合法杂志许可证的华人
+          月刊。
+
+          经过两年时间的辐射，博咨询成功入驻G2E（亚洲国际博彩娱乐展会），并于2017
+          年正式成为G2E大会指定刊物。与此同时，博咨询也受到欧美国家相关博彩企业的
+          关注，成为其进军亚洲博彩市场的桥头堡。
+        </div>
+        <ul class="pub-count">
+          <li>
+            <h2>20000</h2>
+            <p>每月发行期刊数</p>
+          </li>
+          <li>
+            <h2>100</h2>
+            <p>商家合作</p>
+          </li>
+          <li>
+            <h2>86</h2>
+            <p>杂志投放</p>
+          </li>
+          <li>
+            <h2>24</h2>
+            <p>发行刊数</p>
+          </li>
+        </ul>
+      </div>
+      <div class="mgz-img">
+        <img src="./src/images/44.jpg">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 杂志展示 -->
+<section id="magazine-carousel">
+  <div class="bg-right">
+    <div class="sqr"></div>
+  </div>
+  <div class="container">
+    <div class="prd-title">
+      <h6 class="small">Magazine show</h6>
+      <b class="line-green"></b>
+      <a class="btn-contact" href="#" target="_blank">点此联系杂志合作</a>
+    </div>
+    <h2 class="big">MAGAZINE SHOW</h2>
+    <h4 class="h4">杂志展示</h4>
+  </div>
+  <div class="rvc" id="rvc1">
+    <div class="rvc-wrapper">
+      <ul>
+        <li>
+          <a href="#">
+            <div class="img-wrapper">
+              <img src="./src/images/55-1.png">
+            </div>
+            <p>2018年02月</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="img-wrapper">
+              <img src="./src/images/55-2.png">
+            </div>
+            <p>2018年01月</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="img-wrapper">
+              <img src="./src/images/55-3.png">
+            </div>
+            <p>2017年12月</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="img-wrapper">
+              <img src="./src/images/55-4.png">
+            </div>
+            <p>2017年11月</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="img-wrapper">
+              <img src="./src/images/55-3.png">
+            </div>
+            <p>2017年10月</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="img-wrapper">
+              <img src="./src/images/55-4.png">
+            </div>
+            <p>2017年09月</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="rvc-prv"><img src="./src/images/lt.png"></div>
+    <div class="rvc-next"><img src="./src/images/gt.png"></div>
+  </div>
+</section>
+<!-- 方块装饰 -->
+<section class="square">
+  <div class="bg-left">
+    <div class="sqr">
+      <div class="white"></div>
+      <div class="green"></div>
+    </div>
+  </div>
+  <div class="bg-right">
+    <div class="sqr">
+      <div class="green"></div>
+    </div>
+  </div>
+  <div class="container">
+
+  </div>
+</section>
+<!-- footer -->
+<footer id="Footer">
+  <div class="foot-box2">
+    <div class="container">
+      <div class="friend-title">
+        <h2 class="rt-title">战略合作伙伴</h2>
+      </div>
+      <ul class="friend-links">
+        <li class="friend-li">
+          <a target="_blank" href=" http://www.maya-gaming.com"><i class="partners ptn1"></i></a>
+        </li>
+        <li class="friend-li">
+          <a target="_blank" href="http://www.boniu365.com"><i class="partners ptn2"></i></a>
+        </li>
+        <li class="friend-li">
+          <a target="_blank" href="#"><i class="partners ptn3"></i></a>
+        </li>
+        <li class="friend-li">
+          <a target="_blank" href="https://www.bomao88.com/auth/signin"><i class="partners ptn4"></i></a>
+        </li>
+        <li class="friend-li">
+          <a target="_blank" href="https://www.1396bo.com/app"><i class="partners ptn5"></i></a>
+        </li>
+        <li class="friend-li">
+          <a target="_blank" href="https://www.g2easia.com/"><i class="partners ptn6"></i></a>
+        </li>
+        <li class="friend-li">
+          <a target="_blank" href="http://www.haoyunlai.ph/"><i class="partners ptn7"></i></a>
+        </li>
+        <li class="friend-li">
+          <a target="_blank" href="https://bbs.boniu3658.com/thread-179439-1-1.html"><i class="partners ptn8"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-box">
+    <div class="container">
+      <ul class="foot-list">
+        <li class="icon-cnt">
+          <a class="online" href="#">
+            <i class="icon icon-msg">&#xe700;</i><b>在线咨询</b>
+          </a>
+          <p>QQ：1927887072</p>
+          <p>Email：HR@betconsult.me</p>
+          <p class="icons">
+            <a href="#"><i class="icon icon-wechat">&#xe62f;</i></a>
+            <a href="#"><i class="icon icon-qq2">&#xe612;</i></a>
+            <a href="#"><i class="icon icon-skype">&#xe697;</i></a>
+          </p>
+        </li>
+        <li class="wx-img">
+          <img src="./src/images/wx-img.png" alt="博咨询微信">
+          <p class="wx-txt">微信扫一扫关注博咨询</p>
+        </li>
+        <li>
+          <h2>关于我们</h2>
+          <a href="#">关于我们</a>
+          <a href="#">最新消息</a>
+        </li>
+        <li>
+          <h2>旗下产品</h2>
+          <a href="#">博牛社区</a>
+          <a href="#">菠菜圈</a>
+          <a href="#">伯招聘</a>
+          <a href="#">博咨询月刊</a>
+        </li>
+        <li>
+          <h2>商务合作</h2>
+          <a href="#">战略合作</a>
+          <a href="#">网站合作</a>
+          <a href="#">博咨询月刊合作</a>
+          <a href="#">伯招聘海外人才网</a>
+        </li>
+        <li>
+          <h2>招贤纳士</h2>
+          <a href="#">高薪职位</a>
+        </li>
+        <li>
+          <h2>优伯国际</h2>
+          <a href="#">了解更多</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="copy-rt">
+    <div class="container">Power By Betconsult &copy;2016-2020 Betconsut Consulting Inc</div>
+  </div>
+</footer>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="./src/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./src/js/rvc.js"></script>
+<script type="text/javascript">
+  $('#rvc1').rvc({
+    liNum: 4,//2~5之间的整数
+    spaceBetween: 30,//li项之间的距离
+    plr: 20,//当屏幕小于1024时，rvc的padding-left，padding-right值
+    time: 400,//动画时间
+    prv: '.rvc-prv',//前一个按钮
+    next: '.rvc-next'//下一个按钮
+
+  })
+</script>
+
+
+</body>
+</html>

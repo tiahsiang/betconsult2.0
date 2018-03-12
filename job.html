@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=0">
+  <meta name="renderer" content="webkit">
+  <link type="favicon" rel="shortcut icon" href="./src/images/favicon.ico" mce_href="/favicon.ico" type="image/x-icon"/>
+  <link rel="shortcut icon" href="./src/images/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">
+  <title>博咨询_招贤纳士</title>
+  <!-- css by Tia -->
+  <link rel="stylesheet" href="src/css/index.css"/>
+  <link rel="stylesheet" href="src/css/pager.css"/>
+
+  <style>
+    #jobs {
+      position: relative;
+    }
+    #jobs .container {
+      min-height: 784px;
+      background: #fff;
+      padding: 80px 0 0 0;
+      position: relative;
+    }
+    #jobs .bg-left {
+      width: 100%;
+      height: 78px;
+      background: transparent;
+      position: absolute;
+      top: -39px;
+      left: 0;
+      z-index: 99;
+      overflow: hidden;
+    }
+    #jobs .bg-left .sqr {
+      width: 52.3%;
+      height: 100%;
+      float: left;
+      background: #87c228;
+      position: relative;
+    }
+    #jobs .bg-left .sqr p {
+      line-height: 40px;
+      position: absolute;
+      top: 50%;
+      right: 13%;
+      margin-top: -20px;
+    }
+    #jobs .bg-left .sqr p>a {
+      font-size: 18px;
+      color: #333;
+      font-weight: 400;
+    }
+    #jobs .bg-left .sqr p>a:last-child {
+      margin-left: 60px;
+    }
+    /*#jobs .bg-left .sqr p>a:hover {*/
+    /*color: #fff;*/
+    /*}*/
+    .icon-email, .icon-qq {
+      font-size: 19px;
+      margin-right: 10px;
+    }
+    .icon-email {
+      font-size: 22px;
+    }
+    /**** 表格样式  ****/
+    body {
+      font-family: arial;
+      background: #f3f3f3;
+    }
+
+    table {
+      /*border: 1px solid #ccc;*/
+      width: 80%;
+      margin:0;
+      padding:0;
+      border-collapse: collapse;
+      border-spacing: 0;
+      margin: 0 auto;
+    }
+
+    table tr {
+      /*border: 1px solid #ddd;*/
+      border-bottom: 1px solid #efefef;
+      padding: 5px;
+      background: #fff;
+      cursor: pointer;
+    }
+
+    table tbody tr:hover , table tbody tr:hover td a {
+      color: #87c228;
+    }
+
+    table th, table td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    table th {
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    @media screen and (max-width: 600px) {
+      table {
+        border: 0;
+      }
+      table thead {
+        display: none;
+      }
+      table tr {
+        margin-bottom: 10px;
+        display: block;
+        border-bottom: 2px solid #efefef;
+      }
+      table td {
+        display: block;
+        text-align: right;
+        font-size: 13px;
+        border-bottom: 1px dotted #efefef;
+      }
+      table td:last-child {
+        border-bottom: 0;
+      }
+      table td:before {
+        content: attr(data-label);
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
+    .news-pager {
+      width: 80%;
+      margin: auto;
+      text-align: right;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+<!-- 导航 -->
+<nav id="nav">
+  <div class="container">
+    <a class="logo" href="index.html"><img src="./src/images/logo-1.png" alt="lOGO"><b>博咨询</b></a>
+    <ul class="menu">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="index.html">旗下产品</a></li>
+      <li><a href="index.html">商务合作</a></li>
+      <li class="active"><a href="job.html">招贤纳士</a></li>
+      <li><a href="news.html">企业动态</a></li>
+      <li><a href="#">优伯国际</a></li>
+    </ul>
+    <div class="clearfix"></div>
+  </div>
+</nav>
+<!-- banner -->
+<section id="banner">
+  <div class="container">
+  </div>
+</section>
+<!-- 招聘职位 -->
+<section id="jobs">
+  <div class="bg-left">
+    <div class="sqr">
+      <p>
+        <a href="#"><i class="icon icon-qq">&#xe612;</i>1927887072</a>
+        <a href="#"><i class="icon icon-email">&#xe648;</i>HR@betconsult.me</a>
+      </p>
+    </div>
+  </div>
+  <div class="container">
+    <table>
+      <thead>
+      <tr>
+        <th>职位名称</th>
+        <th>职位经验</th>
+        <th>招聘人数</th>
+        <th>工作地点</th>
+        <th>发布时间</th>
+        <th>更多详情</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td data-label="职位名称">PHP开发工程师</td>
+        <td data-label="工作经验">1-3年</td>
+        <td data-label="招聘人数">2人</td>
+        <td data-label="工作地点">广州市</td>
+        <td data-label="发布时间">2018-03-08</td>
+        <td data-label="职位详情"><a href="#" class="check-job">查看职位详情</a></td>
+      </tr>
+      <tr>
+        <td data-label="职位名称">PHP开发工程师</td>
+        <td data-label="工作经验">1-3年</td>
+        <td data-label="招聘人数">2人</td>
+        <td data-label="工作地点">广州市</td>
+        <td data-label="发布时间">2018-03-08</td>
+        <td data-label="职位详情"><a href="#" class="check-job">查看职位详情</a></td>
+      </tr>
+      <tr>
+        <td data-label="职位名称">PHP开发工程师</td>
+        <td data-label="工作经验">1-3年</td>
+        <td data-label="招聘人数">2人</td>
+        <td data-label="工作地点">广州市</td>
+        <td data-label="发布时间">2018-03-08</td>
+        <td data-label="职位详情"><a href="#" class="check-job">查看职位详情</a></td>
+      </tr>
+      <tr>
+        <td data-label="职位名称">PHP开发工程师</td>
+        <td data-label="工作经验">1-3年</td>
+        <td data-label="招聘人数">2人</td>
+        <td data-label="工作地点">广州市</td>
+        <td data-label="发布时间">2018-03-08</td>
+        <td data-label="职位详情"><a href="#" class="check-job">查看职位详情</a></td>
+      </tr>
+      <tr>
+        <td data-label="职位名称">PHP开发工程师</td>
+        <td data-label="工作经验">1-3年</td>
+        <td data-label="招聘人数">2人</td>
+        <td data-label="工作地点">广州市</td>
+        <td data-label="发布时间">2018-03-08</td>
+        <td data-label="职位详情"><a href="#" class="check-job">查看职位详情</a></td>
+      </tr>
+      <tr>
+        <td data-label="职位名称">PHP开发工程师</td>
+        <td data-label="工作经验">1-3年</td>
+        <td data-label="招聘人数">2人</td>
+        <td data-label="工作地点">广州市</td>
+        <td data-label="发布时间">2018-03-08</td>
+        <td data-label="职位详情"><a href="#" class="check-job">查看职位详情</a></td>
+      </tr>
+      <tr>
+        <td data-label="职位名称">PHP开发工程师</td>
+        <td data-label="工作经验">1-3年</td>
+        <td data-label="招聘人数">2人</td>
+        <td data-label="工作地点">广州市</td>
+        <td data-label="发布时间">2018-03-08</td>
+        <td data-label="职位详情"><a href="#" class="check-job">查看职位详情</a></td>
+      </tr>
+      <tr>
+        <td data-label="职位名称">PHP开发工程师</td>
+        <td data-label="工作经验">1-3年</td>
+        <td data-label="招聘人数">2人</td>
+        <td data-label="工作地点">广州市</td>
+        <td data-label="发布时间">2018-03-08</td>
+        <td data-label="职位详情"><a href="#" class="check-job">查看职位详情</a></td>
+      </tr>
+      <tr>
+        <td data-label="职位名称">PHP开发工程师</td>
+        <td data-label="工作经验">1-3年</td>
+        <td data-label="招聘人数">2人</td>
+        <td data-label="工作地点">广州市</td>
+        <td data-label="发布时间">2018-03-08</td>
+        <td data-label="职位详情"><a href="#" class="check-job">查看职位详情</a></td>
+      </tr>
+      <tr>
+        <td data-label="职位名称">PHP开发工程师</td>
+        <td data-label="工作经验">1-3年</td>
+        <td data-label="招聘人数">2人</td>
+        <td data-label="工作地点">广州市</td>
+        <td data-label="发布时间">2018-03-08</td>
+        <td data-label="职位详情"><a href="#" class="check-job">查看职位详情</a></td>
+      </tr>
+      </tbody>
+    </table>
+    <!-- 分页 s -->
+    <div class="news-pager">
+      <ul class="pagination" id="page2">
+      </ul>
+      <div class="pageJump">
+        <span>跳转到</span>
+        <input type="text"/>
+        <span>页</span>
+        <button type="button" class="button">确定</button>
+      </div>
+    </div>
+    <!-- 分页 e -->
+  </div>
+</section>
+<!-- footer -->
+<footer id="Footer">
+  <div class="foot-box2">
+    <div class="container">
+      <div class="friend-title">
+        <h2 class="rt-title">战略合作伙伴</h2>
+      </div>
+      <ul class="friend-links">
+        <li class="friend-li">
+          <a target="_blank" href=" http://www.maya-gaming.com"><i class="partners ptn1"></i></a>
+        </li>
+        <li class="friend-li">
+          <a target="_blank" href="http://www.boniu365.com"><i class="partners ptn2"></i></a>
+        </li>
+        <li class="friend-li">
+          <a target="_blank" href="#"><i class="partners ptn3"></i></a>
+        </li>
+        <li class="friend-li">
+          <a target="_blank" href="https://www.bomao88.com/auth/signin"><i class="partners ptn4"></i></a>
+        </li>
+        <li class="friend-li">
+          <a target="_blank" href="https://www.1396bo.com/app"><i class="partners ptn5"></i></a>
+        </li>
+        <li class="friend-li">
+          <a target="_blank" href="https://www.g2easia.com/"><i class="partners ptn6"></i></a>
+        </li>
+        <li class="friend-li">
+          <a target="_blank" href="http://www.haoyunlai.ph/"><i class="partners ptn7"></i></a>
+        </li>
+        <li class="friend-li">
+          <a target="_blank" href="https://bbs.boniu3658.com/thread-179439-1-1.html"><i class="partners ptn8"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-box">
+    <div class="container">
+      <ul class="foot-list">
+        <li class="icon-cnt">
+          <a class="online" href="#">
+            <i class="icon icon-msg">&#xe700;</i><b>在线咨询</b>
+          </a>
+          <p>QQ：1927887072</p>
+          <p>Email：HR@betconsult.me</p>
+          <p class="icons">
+            <a href="#"><i class="icon icon-wechat">&#xe62f;</i></a>
+            <a href="#"><i class="icon icon-qq2">&#xe612;</i></a>
+            <a href="#"><i class="icon icon-skype">&#xe697;</i></a>
+          </p>
+        </li>
+        <li class="wx-img">
+          <img src="./src/images/wx-img.png" alt="博咨询微信">
+          <p class="wx-txt">微信扫一扫关注博咨询</p>
+        </li>
+        <li>
+          <h2>关于我们</h2>
+          <a href="#">关于我们</a>
+          <a href="#">最新消息</a>
+        </li>
+        <li>
+          <h2>旗下产品</h2>
+          <a href="#">博牛社区</a>
+          <a href="#">菠菜圈</a>
+          <a href="#">伯招聘</a>
+          <a href="#">博咨询月刊</a>
+        </li>
+        <li>
+          <h2>商务合作</h2>
+          <a href="#">战略合作</a>
+          <a href="#">网站合作</a>
+          <a href="#">博咨询月刊合作</a>
+          <a href="#">伯招聘海外人才网</a>
+        </li>
+        <li>
+          <h2>招贤纳士</h2>
+          <a href="#">高薪职位</a>
+        </li>
+        <li>
+          <h2>优伯国际</h2>
+          <a href="#">了解更多</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="copy-rt">
+    <div class="container">Power By Betconsult &copy;2016-2020 Betconsut Consulting Inc</div>
+  </div>
+</footer>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="./src/bootstrap/js/bootstrap.min.js"></script>
+<script src="./src/js/pager.js"></script>
+<script>
+  Page({
+    num:7,					//页码数
+    startnum:1,				//指定页码
+    elem:$('#page2'),		//指定的元素
+    callback:function(n){	//回调函数
+      console.log(n);
+    }
+  });
+</script>
+
+</body>
+</html>
